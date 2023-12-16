@@ -13,6 +13,8 @@ final class Transaction {
     @Attribute(.unique) let id: String
     let timestamp: Date
     let amount: Decimal
+    let type: TransactionTypeString
+    let name: String
     var amountText: String {
         "\(amount)"
     }
@@ -20,6 +22,12 @@ final class Transaction {
         self.timestamp = timestamp
         self.id = UUID().uuidString
         self.amount = amount
+        self.type = TransactionType.none.rawValue
+        self.name = ""
     }
 }
 
+typealias TransactionTypeString = String
+enum TransactionType: String {
+    case none
+}
