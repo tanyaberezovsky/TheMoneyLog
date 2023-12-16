@@ -12,6 +12,7 @@
 		8464499B2B2CB1690004D690 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464499A2B2CB1690004D690 /* Transaction.swift */; };
 		8464499D2B2CB16C0004D690 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8464499C2B2CB16C0004D690 /* Assets.xcassets */; };
 		846449A02B2CB16C0004D690 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8464499F2B2CB16C0004D690 /* Preview Assets.xcassets */; };
+		84C7CD7E2B2D92560006307B /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C7CD7D2B2D92560006307B /* CustomTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		8464499A2B2CB1690004D690 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		8464499C2B2CB16C0004D690 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8464499F2B2CB16C0004D690 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		84C7CD7D2B2D92560006307B /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		846449952B2CB1690004D690 /* MoneyLog */ = {
 			isa = PBXGroup;
 			children = (
+				84C7CD7B2B2D920E0006307B /* Features */,
 				846449962B2CB1690004D690 /* MoneyLogApp.swift */,
 				846449982B2CB1690004D690 /* ContentView.swift */,
 				8464499A2B2CB1690004D690 /* Transaction.swift */,
@@ -68,6 +71,22 @@
 				8464499F2B2CB16C0004D690 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		84C7CD7B2B2D920E0006307B /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				84C7CD7C2B2D92450006307B /* TabBar */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		84C7CD7C2B2D92450006307B /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				84C7CD7D2B2D92560006307B /* CustomTabView.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +162,7 @@
 				846449992B2CB1690004D690 /* ContentView.swift in Sources */,
 				8464499B2B2CB1690004D690 /* Transaction.swift in Sources */,
 				846449972B2CB1690004D690 /* MoneyLogApp.swift in Sources */,
+				84C7CD7E2B2D92560006307B /* CustomTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

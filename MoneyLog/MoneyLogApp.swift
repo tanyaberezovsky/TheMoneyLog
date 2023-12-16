@@ -10,6 +10,8 @@ import SwiftData
 
 @main
 struct MoneyLogApp: App {
+    @State private var selectedTab: Tab = .home
+
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Transaction.self,
@@ -25,7 +27,20 @@ struct MoneyLogApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VStack {
+                switch selectedTab {
+                case .home:
+                    NavigationView {
+                        FirstView()
+                    }
+                case .transactions:
+                    NavigationView {
+                        SecondView()
+                    }
+                }
+                CustomTabView(selectedTab: $selectedTab)
+                    .frame(height: 50)
+            }
         }
         .modelContainer(sharedModelContainer)
     }
