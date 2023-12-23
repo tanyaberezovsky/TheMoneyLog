@@ -45,7 +45,7 @@ struct CustomTabView: View {
                     Text("Home")
                         .font(.caption2)
                 }
-                .foregroundColor(selectedTab == .home ? .green : .primary)
+                .foregroundColor(selectedTab == .home ? Colors.Tab.selected : Colors.Tab.notselected)
             }
             .frame(width: 60, height: 50)
             Spacer()
@@ -54,7 +54,7 @@ struct CustomTabView: View {
             } label: {
                 ZStack {
                     Circle()
-                        .foregroundColor(.green)
+                        .foregroundColor(Colors.Tab.selected)
                         .frame(width: 80, height: 80)
                         .shadow(radius: 2)
                     Image(systemName: "plus.circle.fill")
@@ -77,7 +77,7 @@ struct CustomTabView: View {
                     Text("History")
                         .font(.caption2)
                 }
-                .foregroundColor(selectedTab == .transactions ? .green : .primary)
+                .foregroundColor(selectedTab == .transactions ? Colors.Tab.selected : Colors.Tab.notselected)
             }
             .frame(width: 60, height: 50)
             Spacer()
