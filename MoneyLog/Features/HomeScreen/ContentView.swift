@@ -13,6 +13,34 @@ struct ContentView: View {
     @Query private var items: [Transaction]
 
     var body: some View {
+        VStack(spacing: 10) {
+            VStack {
+                Text("$27")
+                    .font(.headline)
+                Text("Today left in my pocket")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+
+            HStack {
+                Text("Budget $40")
+                Spacer()
+                Text("Spent $48")
+                    .foregroundColor(.red)
+            }
+            ProgressView(value: 0.09)
+                .tint(.red)
+            HStack {
+                Text("Tomorrow's budget: $37")
+                Spacer()
+                Text("Over budget: $8")
+                    .foregroundColor(.red)
+            }
+        }
+        .padding()
+        .background(Color.white)
+        .cornerRadius(10)
         NavigationSplitView {
             List {
                 ForEach(items) { item in
@@ -61,3 +89,5 @@ struct ContentView: View {
     ContentView()
         .modelContainer(for: Transaction.self, inMemory: true)
 }
+
+

@@ -47,7 +47,7 @@ struct CustomTabView: View {
                 }
                 .foregroundColor(selectedTab == .home ? Colors.Tab.selected : Colors.Tab.notselected)
             }
-            .frame(width: 60, height: 50)
+            .frame(width: 120, height: 50)
             Spacer()
             Button {
                 
@@ -75,6 +75,20 @@ struct CustomTabView: View {
                         .scaledToFit()
                         .frame(width: 25, height: 25)
                     Text("History")
+                        .font(.caption2)
+                }
+                .foregroundColor(selectedTab == .transactions ? Colors.Tab.selected : Colors.Tab.notselected)
+            }
+            .frame(width: 60, height: 50)
+            Button {
+                selectedTab = .transactions
+            } label: {
+                VStack {
+                    Image(systemName: "list.bullet.circle")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
+                    Text("Settings")
                         .font(.caption2)
                 }
                 .foregroundColor(selectedTab == .transactions ? Colors.Tab.selected : Colors.Tab.notselected)
